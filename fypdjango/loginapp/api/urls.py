@@ -2,10 +2,10 @@ from xml.etree.ElementInclude import include
 
 from rest_framework.routers import DefaultRouter
 
-from ..views import testingPage, AuthenticationGoogleViewSet
+from ..views import testingPage, userAuthenticationViewSet
 
 router = DefaultRouter()
-router.register(r'',AuthenticationGoogleViewSet,basename='authentication')
+router.register(r'',userAuthenticationViewSet,basename='authentication')
 urlpatterns = router.urls
 
 
@@ -14,6 +14,5 @@ urlpatterns = router.urls
 #from ..views import testingPage
 
 #urlpatterns = [
-
 #    url(r'^signup/$', testingPage, name='signup'),
 #]
