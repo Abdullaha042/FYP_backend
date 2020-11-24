@@ -11,3 +11,7 @@ class usersAuthentication(models.Model):
 
     def __str__(self):
         return self.username
+
+    def mytestdepartment(self):
+        print("department testing")
+        return self.department

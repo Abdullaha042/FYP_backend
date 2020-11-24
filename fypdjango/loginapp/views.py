@@ -8,12 +8,18 @@ from .api.serializers import usersAuthenticationSerializer
 # Create your views here.2
 class userAuthenticationViewSet(viewsets.ModelViewSet):
     queryset = usersAuthentication.objects.all().values()
-    #queryset = list(AuthenticationGoogle.objects.all().values())
-    # AuthenticationGoogle.objects.filter(email='bsef17a042@pucit.edu.pk')
+    #queryset = list(usersAuthentication.objects.all().values())
+    #print(usersAuthentication.objects.filter(password='admin'))
     
     #print("testing")
     #print(queryset[0].email)
     print(queryset.count())
+
+    ##creating class and setting vlues in its objects
+    obj = usersAuthentication('testN','testU','testD','testP')
+    print(obj.mytestdepartment)
+    #obj.save()
+
     serializer_class = usersAuthenticationSerializer
 
 def testingPage(request):
