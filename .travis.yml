@@ -18,5 +18,3 @@ virtualenv:
   system_site_packages: true
 script:
   - pytest
-pandoc_version:
-
