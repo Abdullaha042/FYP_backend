@@ -28,3 +28,7 @@ class thingAttributesViewSet(viewsets.ModelViewSet):
 class departmentAttributesViewSet(viewsets.ModelViewSet):
     queryset = Attributes.objects.filter(entity_type="Department")
     serializer_class = attributesSerializer
+
+class allStaffMembersViewSet(viewsets.ModelViewSet):
+    queryset = Entity.objects.filter(entity_type="Staff")
+    serializer_class = entitySerializer
