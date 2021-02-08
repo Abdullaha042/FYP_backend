@@ -1,6 +1,6 @@
 from xml.etree.ElementInclude import include
 from rest_framework.routers import DefaultRouter
-from .views import postStaffViewSet,staffAttributesViewSet,thingAttributesViewSet,departmentAttributesViewSet,postAttributesViewSet,allStaffMembersViewSet,allThingsViewSet,allDepartmentsViewSet
+from .views import postStaffViewSet,staffAttributesViewSet,thingAttributesViewSet,departmentAttributesViewSet,postAttributesViewSet,allStaffMembersViewSet,allThingsViewSet,allDepartmentsViewSet,allEntityConfiguration,staffEntityConfiguration
 
 router = DefaultRouter()
 router.register(r'addentity',postStaffViewSet,basename='addentities')
@@ -13,6 +13,10 @@ router.register(r'attributes_department',departmentAttributesViewSet,basename='d
 
 router.register(r'get_thing',allThingsViewSet,basename='department')
 router.register(r'get_department',allDepartmentsViewSet,basename='department')
+
+#Entity Configuration
+router.register(r'configuration',allEntityConfiguration,basename='entity_configuration')
+router.register(r'get_conf_staff',staffEntityConfiguration,basename='entity_configuration')
 
 
 urlpatterns = router.urls
