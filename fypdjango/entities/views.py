@@ -40,7 +40,7 @@ class allThingsViewSet(viewsets.ModelViewSet):
 
 
 class allDepartmentsViewSet(viewsets.ModelViewSet):
-    queryset = Entity.objects.filter(entity_type="Organization")
+    queryset = Entity.objects.filter(entity_type="Department")
     serializer_class = entitySerializer
 
 
@@ -52,4 +52,12 @@ class allEntityConfiguration(viewsets.ModelViewSet):
 
 class staffEntityConfiguration(viewsets.ModelViewSet):
     queryset = Entity_Description.objects.filter(type="User")
+    serializer_class = entityDescriptionSerializer
+
+class thingEntityConfiguration(viewsets.ModelViewSet):
+    queryset = Entity_Description.objects.filter(type="Thing")
+    serializer_class = entityDescriptionSerializer
+
+class departmentEntityConfiguration(viewsets.ModelViewSet):
+    queryset = Entity_Description.objects.filter(type="Department")
     serializer_class = entityDescriptionSerializer
