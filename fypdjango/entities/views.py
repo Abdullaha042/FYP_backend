@@ -8,7 +8,7 @@ from .serializers import entitySerializer,attributesSerializer,entityDescription
 # Create your views here.
 
 class postStaffViewSet(viewsets.ModelViewSet):
-    queryset = Entity.objects.all().values()
+    queryset = Entity.objects.all()
     serializer_class = entitySerializer
 
 

@@ -3,7 +3,7 @@ from .models import Entity,Attributes,Entity_Description
 
 class entitySerializer(serializers.ModelSerializer):
     class Meta:
-        fields = ('entity_name','entity_type','entity_desc_type', 'entity_attributes')
+        fields = ('id','entity_name','entity_type','entity_desc_type', 'entity_attributes')
         model = Entity
 
 
