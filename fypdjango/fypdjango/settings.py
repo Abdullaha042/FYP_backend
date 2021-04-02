@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'loginapp',
     'users',
     'entities',
+    'processes',
     'rest_framework_simplejwt.token_blacklist',
 
 ]
